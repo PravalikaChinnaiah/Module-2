@@ -28,8 +28,34 @@ To write a Python program that generates **Pascal's Triangle** using numbers. Th
 
 ## 🧪 Program
 Add Code Here
+~~~
+def factorial(n):
+    fact = 1
+    for i in range(1, n + 1):
+        fact *= i
+    return fact
+
+# Function to calculate nCr
+def nCr(n, r):
+    return factorial(n) // (factorial(r) * factorial(n - r))
+
+# Input number of rows
+rows = int(input("Enter number of rows: "))
+
+# Generate Pascal's Triangle
+for i in range(rows):
+    # Print spaces for formatting
+    print(" " * (rows - i), end="")
+
+    for j in range(i + 1):
+        print(nCr(i, j), end=" ")
+
+    print()
+~~~
 
 ## Sample Output
 
+
 ## Result
+Thus,the Python program that generates **Pascal's Triangle** using numbers. The number of rows is accepted from the user is created successfully.
 
