@@ -29,31 +29,22 @@ To write a Python program that generates **Pascal's Triangle** using numbers. Th
 ## 🧪 Program
 Add Code Here
 ~~~
-def factorial(n):
-    fact = 1
-    for i in range(1, n + 1):
-        fact *= i
-    return fact
-
-# Function to calculate nCr
-def nCr(n, r):
-    return factorial(n) // (factorial(r) * factorial(n - r))
-
-# Input number of rows
 rows = int(input("Enter number of rows: "))
+for n in range(rows):
+    print(" " * (rows - n), end="")
 
-# Generate Pascal's Triangle
-for i in range(rows):
-    # Print spaces for formatting
-    print(" " * (rows - i), end="")
-
-    for j in range(i + 1):
-        print(nCr(i, j), end=" ")
+    value = 1
+    for k in range(n + 1):
+        print(value, end=" ")
+        value = value * (n - k) // (k + 1)  # Formula for nCk
 
     print()
 ~~~
 
 ## Sample Output
+
+
+<img width="1107" height="722" alt="image" src="https://github.com/user-attachments/assets/03049844-01c8-4b6f-9f82-cba069a46cae" />
 
 
 ## Result
